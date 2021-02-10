@@ -34,7 +34,8 @@ export default class App_Pagination extends Component {
     const indexOfFirstPost = indexOfLastPost - this.state.postPerPage;
     const posts = this.state.posts.slice(indexOfFirstPost, indexOfLastPost);
     return (
-      <div>
+      <div className="container mt-5">
+        <h1 className="text-primary mb-5">My blog</h1>
         <Post posts={posts} loading={this.state.loading}></Post>
         <Pagination
           setCurrentPageHandle={this.setCurrentPageHandle}
